@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+    --bg-color: #f4efe6;
+    --header-bg: #1f3126;
+    --text-dark: #2b2b2b;
+    --text-muted: #666666;
+    --card-white: #ffffff;
+    --accent-orange: #d1512d;
+    --accent-green: #2d4a3e;
+    --card-gray: #e9e2d7;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    background-color: var(--bg-color);
+}
+
+.sessoes {
+    position: absolute;
+    top: 35px;
+    right: 65px;
+    width: 250px;
+    height: 25px;
+    border: 2px solid #090706;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 14px;
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+}
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1f3126;
+    border-radius: 20px;
+    padding: 6px 14px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.pesquisa input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+.pesquisa input::placeholder {
+    color: #a0b0a0;
+}
+
+.pesquisa span {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--accent-green);
+}
+
+.logo span {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--accent-orange);
+}
+
+.btn-search {
+    background-color: var(--accent-green);
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 20px;
+    border: none;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+/* Hero Banner */
+.hero {
+    position: relative;
+    margin: 0 4rem;
+    height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+        url('https://png.pngtree.com/background/20250118/original/pngtree-the-temple-of-the-greek-god-poseidon-on-the-rock-picture-image_15551258.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+.hero-content {
+    max-width: 600px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--accent-orange);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* Seção Categorias / Domínios (5 em linha única) */
+.domains-section {
+    padding: 3rem 4rem;
+}
+
+.section-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+.domain-card {
+    background-color: var(--card-gray);
+    padding: 1.2rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.domain-card:hover {
+    background-color: #ded5c8;
+}
+
+.domain-number {
+    color: var(--accent-orange);
+    font-weight: 700;
+}
+
+
+.featured-section {
+    padding: 1rem 4rem 4rem 4rem;
+}
+
+.featured-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.featured-title h2 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.3rem;
+}
+
+.featured-title p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.btn-see-all {
+    color: var(--accent-orange);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.creature-card {
+    background-color: var(--card-white);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s;
+}
+
+.creature-card:hover {
+    transform: translateY(-5px);
+}
+
+.creature-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.creature-info {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.creature-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.4rem;
+}
+
+.creature-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.creature-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.bottom-banner {
+    margin: 0 4rem 4rem 4rem;
+    background-color: var(--accent-green);
+    border-radius: 12px;
+    padding: 3rem 4rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-banner h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.bottom-banner p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsividade Básica */
+@media (max-width: 1024px) {
+    .domains-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Páginas internas dos mitos */
+.nav-home {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.myth-page {
+    max-width: 1180px;
+    margin: 2rem auto 4rem;
+    padding: 0 2rem;
+}
+
+.breadcrumb {
+    color: var(--text-muted);
+    font-size: .85rem;
+    margin-bottom: 1.4rem;
+}
+
+.breadcrumb a {
+    color: var(--accent-orange);
+    text-decoration: none;
+}
+
+.myth-hero {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    min-height: 390px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #1f3126;
+    color: white;
+}
+
+.myth-copy {
+    padding: clamp(2rem, 5vw, 4rem);
+    align-self: center;
+}
+
+.myth-kicker {
+    color: #f0a18a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.myth-copy h1 {
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    margin: 1rem 0;
+}
+
+.myth-copy p {
+    max-width: 540px;
+    color: #e2e8e2;
+    line-height: 1.8;
+}
+
+.myth-visual {
+    min-height: 320px;
+    background: #293d32;
+}
+
+.myth-visual img {
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    object-fit: cover;
+    display: block;
+}
+
+.myth-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.myth-article,
+.fact-panel {
+    background: white;
+    border-radius: 12px;
+    padding: clamp(1.4rem, 3vw, 2.2rem);
+}
+
+.myth-article h2,
+.fact-panel h2 {
+    color: var(--accent-green);
+    font-size: 1.35rem;
+    margin-bottom: .8rem;
+}
+
+.myth-article p {
+    color: #4d4d4d;
+    line-height: 1.85;
+    margin-bottom: 1.4rem;
+}
+
+.fact-panel {
+    background: var(--card-gray);
+    align-self: start;
+}
+
+.fact-panel p {
+    margin: .6rem 0 1.1rem;
+    font-size: .92rem;
+}
+
+.myth-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    border: 1px solid #b8b0a5;
+    color: floralwhite;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: .75rem 1.2rem;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.search-directory {
+    margin: 1rem 4rem 3rem;
+    padding: 1.5rem;
+    border: 1px solid #ded5c8;
+    border-radius: 12px;
+}
+
+.search-directory h2 {
+    margin-bottom: .5rem;
+    color: var(--accent-green);
+}
+
+.search-directory p {
+    color: var(--text-muted);
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+.directory-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem;
+}
+
+.directory-links a {
+    display: inline-block;
+    background: white;
+    padding: .65rem 1rem;
+    border-radius: 20px;
+    color: var(--accent-green);
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #ded5c8;
+}
+
+.directory-links a:hover {
+    background: var(--accent-green);
+    color: white;
+}
+
+@media(max-width:850px) {
+    header {
+        padding: 1.2rem 1.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        margin: 0 1rem;
+        padding: 2rem;
+        height: auto;
+        min-height: 350px;
+    }
+
+    .domains-section,
+    .featured-section {
+        padding: 2rem 1rem;
+    }
+
+    .domains-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bottom-banner {
+        margin: 0 1rem 2rem;
+        padding: 2rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .myth-page {
+        padding: 0 1rem;
+    }
+
+    .myth-hero,
+    .myth-body {
+        grid-template-columns: 1fr;
+    }
+
+    .myth-visual img {
+        min-height: 260px;
+        max-height: 420px;
+    }
+
+    .search-directory {
+        margin: 1rem;
+    }
+}
+
+@media(max-width:520px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .domains-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.1rem;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .pesquisa {
+        width: 100%;
+    }
+}
